@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAH COLLECTIONS</title>
+    <style>
+        /* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;  /* Clean, modern font */
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);  /* Subtle, soft gradient background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;  /* Background stays fixed while scrolling */
+}
+
+/* Header Styling with Logo */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);  /* Darker gradient for a sleek look */
+    color: white;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+}
+
+header .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    width: 140px;
+    height: auto;
+    border-radius: 50%;  /* Circular logo */
+    border: 3px solid white;  /* White border for focus */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);  /* Drop shadow for depth */
+}
+
+.animated-title {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    animation: fadeInDown 2s ease-in-out;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Keyframes for Header Animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Advanced 3D Background Section */
+.three-d-background {
+    background: url('background.jpg') no-repeat center center/cover;  /* High-quality image background */
+    padding: 60px;
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);  /* Deeper shadow for 3D effect */
+    margin: 50px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.three-d-background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);  /* Dark overlay for better readability */
+    z-index: -1;
+}
+
+.three-d-background img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);  /* Strong shadow */
+    transition: transform 0.3s ease;
+}
+
+.three-d-background img:hover {
+    transform: scale(1.1);  /* Hover zoom effect */
+}
+
+.three-d-background p {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Course Listing Styling */
+.container h2 {
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #1e3c72;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2em;
+    color: #2a5298;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.list-group-item {
+    background-color: #fff;  /* Contrast background */
+    border: none;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: translateY(-8px);  /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+}
+
+/* Registration Form Styling */
+.registration-form {
+    background-color: #f7f9fc;  /* Soft light background */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+    margin-top: 50px;
+}
+
+.registration-form h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #1e3c72;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form-control {
+    padding: 20px;
+    font-size: 1.2em;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 5px 20px rgba(30, 60, 114, 0.3);  /* Blue glow on focus */
+    border-color: #1e3c72;
+}
+
+button[type="submit"] {
+    background-color: #1e3c72;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2a5298;
+    transform: translateY(-5px);  /* Lift button on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2a2e35;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);  /* Subtle top shadow */
+}
+
+footer p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>METAH COLLECTIONS</h1>
+    <p>Your one-stop for custom clothing design and branding</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="banner" id="home">
+    <h2>Unique Styles, Expert Branding</h2>
+    <p>We create and brand clothing that stands out</p>
+</section>
+
+<section class="products" id="products">
+    <h2>Our Latest Collection</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="shirt1.jpg" alt="Shirt 1">
+            <h3>Classic White Shirt</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="shirt2.jpg" alt="Shirt 2">
+            <h3>Elegant Black Dress</h3>
+            <p>$49.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="shirt3.jpg" alt="Shirt 3">
+            <h3>Casual Denim Jacket</h3>
+            <p>$39.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>&copy; 2024 METAH COLLECTIONS. All Rights Reserved.</p>
+    <p>Email: contact@metahcollections.com | Phone: +234123456789</p>
+</footer>
+
+</body>
+</html>
